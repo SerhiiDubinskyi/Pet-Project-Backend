@@ -1,6 +1,7 @@
 from django.db import models
 from .abc_profile import ABCProfile
 from .user_profile import UserProfile
+from ..case import Case
 
 
 class PetProfile(ABCProfile):
@@ -10,6 +11,7 @@ class PetProfile(ABCProfile):
     size = models.PositiveSmallIntegerField()
     description = models.TextField(max_length=2000, blank=True, null=False)
     cases = models.ForeignKey(Case, on_delete=models.CASCADE, null=True)
+
     is_vaccinated = models.BooleanField(default=False)
     is_sterilized = models.BooleanField(default=False)
     is_microchipped = models.BooleanField(default=False)
