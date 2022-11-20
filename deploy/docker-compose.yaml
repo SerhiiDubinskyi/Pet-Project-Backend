@@ -7,6 +7,7 @@ services:
     environment:
       POSTGRES_PASSWORD: example
       POSTGRES_USER: example
+      POSTGRES_DB: example
     ports:
     - "5433:5432"
 
