@@ -1,5 +1,5 @@
 from django.db import models
-from abc_profile import ABCProfile
+from .abc_profile import ABCProfile
 
 
 class UserProfile(ABCProfile):

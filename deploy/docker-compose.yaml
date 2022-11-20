@@ -8,6 +8,8 @@ services:
       POSTGRES_PASSWORD: example
       POSTGRES_USER: example
       POSTGRES_DB: example
+#    volumes:
+#      - $(pwd)../DB_data/:/var/lib/postgresql/data
     ports:
     - "5433:5432"
 

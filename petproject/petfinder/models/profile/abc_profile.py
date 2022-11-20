@@ -8,3 +8,6 @@ class ABCProfile(Base):
     age = models.PositiveSmallIntegerField(validators=[MaxValueValidator(250)])
     gender = models.TextChoices('gender', 'Male Female Neuter')
     photo = models.URLField(null=True)
+
+    class Meta:
+        abstract = True

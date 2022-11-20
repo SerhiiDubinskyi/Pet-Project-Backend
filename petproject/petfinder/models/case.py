@@ -1,6 +1,6 @@
 from django.db import models
 from .base import Base
-from profile.user_profile import UserProfile
+from .profile.user_profile import UserProfile
 
 
 class Case(Base):

@@ -22,8 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY'),
-    # 'django-insecure-#b3b(*lytt30qe6ab_(g_o_qcqy_k&4w2#g681ncd$#%(&+g$v'
+SECRET_KEY = 'django-insecure-#b3b(*lytt30qe6ab_(g_o_qcqy_k&4w2#g681ncd$#%(&+g$v'
 # Admins
 ADMINS = []
 
@@ -80,17 +79,26 @@ WSGI_APPLICATION = 'petproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.getenv('DB_NAME'),
+#         'USER': os.getenv('DB_USER'),
+#         'PASSWORD': os.getenv('DB_PASSWORD'),
+#         'HOST': os.getenv('DB_HOST'),
+#         'PORT': '5433',
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
+        'NAME': 'example',
+        'USER': 'example',
+        'PASSWORD': 'example',
+        'HOST': 'localhost',
         'PORT': '5433',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
