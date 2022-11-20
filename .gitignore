@@ -17,8 +17,6 @@ __pycache__
 !.vscode/extensions.json
 .history
 
-*.log
-
 # Intellij
 out/
 
