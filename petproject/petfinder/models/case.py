@@ -10,3 +10,4 @@ class Case(Base):
     found_by = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True)
     found_date = models.DateField(null=True)
     description = models.TextField(max_length=500, null=True)
+

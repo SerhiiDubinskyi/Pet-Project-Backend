@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'petfinder.apps.PetfinderConfig',
+
+    'drf_yasg', # swagger
 ]
 
 MIDDLEWARE = [

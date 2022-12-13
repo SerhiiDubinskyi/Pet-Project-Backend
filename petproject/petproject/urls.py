@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .yasg import url_patterns as doc_url_patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+urlpatterns += doc_url_patterns
