@@ -9,3 +9,11 @@ class UserProfile(ABCProfile):
     facebook = models.CharField(max_length=30, null=False)  # TODO : need validation
     instagram = models.CharField(max_length=30, null=False)  # TODO : need validation
     description = models.TextField(max_length=1000, blank=True, null=False)
+
+    def __str__(self):
+        return f'Id[{self.pk}] User "{self.name or self.email}"'
+
+    class Meta:
+        verbose_name = "Пользователь"
+        verbose_name_plural = "Пользователи"
+        ordering = ['created_at', 'name']

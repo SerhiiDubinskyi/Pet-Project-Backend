@@ -1,0 +1,21 @@
+###Create User
+POST http://localhost:8001/api/v1/register/
+Content-Type: application/json
+
+{
+  "username": "Test_user",
+  "password": "some_password"
+}
+
+###Login
+POST http://localhost:8001/api/v1/login/
+Content-Type: application/json
+
+{
+  "username": "Test_user",
+  "password": "some_password"
+}
+
+
+###Check if Authenticated
+GET http://localhost:8001/api/user/

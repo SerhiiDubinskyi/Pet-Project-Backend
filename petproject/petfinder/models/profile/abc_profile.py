@@ -7,7 +7,7 @@ class ABCProfile(Base):
     name = models.CharField(max_length=30, blank=False, null=False)
     age = models.PositiveSmallIntegerField(validators=[MaxValueValidator(250)])
     gender = models.TextChoices('gender', 'Male Female Neuter')
-    photo = models.URLField(null=True)
+    photo = models.URLField(null=True) #TODO: Change to ImageField
 
     class Meta:
         abstract = True
